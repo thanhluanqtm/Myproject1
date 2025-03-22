@@ -4,7 +4,12 @@ const port = process.env.PORT || 3000
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/html');
-  res.end('
+  res.end(`<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThÃ´ng tin há»c viÃªn</title>
     <style>
         table {
             width: 100%;
@@ -24,23 +29,24 @@ const server = http.createServer((req, res) => {
     <table>
         <tr>
             <th>MSHV</th>
-            <th>H? tên</th>
-            <th>Ngày sinh</th>
-            <th>Quê quán</th>
+            <th>Há» tÃªn</th>
+            <th>NgÃ y sinh</th>
+            <th>QuÃª quÃ¡n</th>
             <th>Email</th>
-            <th>SĞT</th>
+            <th>SÄT</th>
         </tr>
         <tr>
             <td>M2524011</td>
-            <td>Võ Thanh Luân</td>
+            <td>VÃµ Thanh LuÃ¢n</td>
             <td>26/12/1988</td>
-            <td>C?n Tho</td>
+            <td>Cáº§n ThÆ¡</td>
             <td>luanm2524011@gstudent</td>
             <td>0948838407</td>
         </tr>
     </table>
 </body>
-</html>');
+</html>`
+);
 });
 
 server.listen(port,() => {
